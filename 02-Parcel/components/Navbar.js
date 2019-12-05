@@ -1,6 +1,17 @@
 import React from 'react'
 
-const Navbar = () => {
+export const Navitem = ({...props}) => {
+    return (
+        <li className="nav=item">
+            <a href ={props.link} 
+            className="nav-item" >
+                {props.text} 
+            </a>
+        </li>
+    )
+}
+
+export default function Navbar({...props}) {
     return (
         <div>
             <nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -34,5 +45,3 @@ const Navbar = () => {
         </div>
     )
 }
-
-export default Navbar
